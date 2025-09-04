@@ -1,0 +1,57 @@
+version: "3.6"
+
+services:
+  mongodb:
+    container_name: mongodb
+    image: mongo:latest
+    environment:
+      - PORT=3000
+      - MONGODBURL="URL"
+    expose:
+      - 27017
+    # ports:
+    #   - 27017:27017
+    volumes:
+      - vol-1:/data/db:rw
+    restart: always
+    networks:
+      - net-1
+
+  backend:
+    container_name: backend
+    depends_on:
+      - mongodb
+    build:
+      context: ./Backend
+      dockerfile: Dockerfile
+    restart: always
+    expose:
+      - 3000
+    ports:
+      - 3000:3000
+    # volumes:
+      # - "C:/Users/rrche/Desktop/DOCKER-TESTING/Backend:/app:rw"
+    networks:
+      - net-1
+
+  client:
+    container_name: client
+    depends_on:
+      - backend
+    build:
+      context: ./Client
+      dockerfile: Dockerfile
+    restart: always
+    expose:
+      - 80
+    ports:
+      - 80:80
+    # volumes:
+    #   - "C:/Users/rrche/Desktop/DOCKER-TESTING/Client:/App:rw"
+    networks:
+      - net-1
+
+volumes:
+  vol-1:
+networks:
+  net-1:

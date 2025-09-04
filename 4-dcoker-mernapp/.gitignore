@@ -1,0 +1,33 @@
+# Node modules
+**/node_modules/
+**/npm-debug.log
+
+# Logs
+logs
+*.log
+*.log.*
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Environment files
+.env
+.env.*.local
+
+# Build output
+/dist
+/build
+/.cache
+/.next
+
+# OS / Editor / IDE files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Docker volumes & temp data
+vol-1/
+*.t*

@@ -1,0 +1,45 @@
+# Node modules and build output
+node_modules
+dist
+build
+tmp
+coverage
+.nyc_output
+.cache
+.parcel-cache
+
+# Logs
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+*.log
+logs
+*.log.*
+
+# Git and Docker metadata
+.git
+.gitignore
+Dockerfile
+.dockerignore
+
+# Environment and secrets
+.env
+.env.local
+.env.*.local
+npmrc
+.npmrc
+
+# Editor and OS files
+.vscode
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Misc
+*.md
