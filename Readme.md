@@ -74,6 +74,10 @@ docker build -t react-app:latest -f docker-for-reactapp/Dockerfile docker-for-re
 docker run -d --rm -p 8080:80 --name react-app react-app:latest
 # visit http://localhost:8080
 ```
+<img width="1237" height="101" alt="Screenshot 2025-09-04 175334" src="https://github.com/user-attachments/assets/ac70038b-e91f-464a-a90c-bcffc92b7c98" />
+<img width="1919" height="939" alt="Screenshot 2025-09-04 175107" src="https://github.com/user-attachments/assets/49e3a697-56ff-4fc6-83c3-1ab51b02f4fa" />
+<img width="1889" height="590" alt="Screenshot 2025-09-04 173907" src="https://github.com/user-attachments/assets/3506729a-2bb3-4298-96b5-018e1ade8317" />
+
 
 Notes: The Dockerfile uses `node:lts-trixie-slim` for build and `nginx:stable-alpine3.21-perl` for serving static files. The final image contains only the built `dist` served by nginx.
 
@@ -93,6 +97,10 @@ docker build -t angular-app:latest -f docker-for-angular/Dockerfile docker-for-a
 docker run -d --rm -p 8081:80 --name angular-app angular-app:latest
 # visit http://localhost:8081
 ```
+<img width="1916" height="955" alt="Screenshot 2025-09-04 153829" src="https://github.com/user-attachments/assets/853f8ed1-f0dc-4371-9701-507b04fac452" />
+<img width="1336" height="265" alt="Screenshot 2025-09-04 153807" src="https://github.com/user-attachments/assets/e0162247-c32e-446c-891f-d79621537f6a" />
+<img width="1882" height="772" alt="Screenshot 2025-09-04 173930" src="https://github.com/user-attachments/assets/8b2d0219-8168-41dd-94ae-759f56d02124" />
+
 
 Notes: Make sure the `COPY --from=builder` path matches your Angular project name (`/app/dist/<project-name>`).
 
@@ -111,6 +119,8 @@ docker build -t node-app:latest -f docker-for-nodeapp/Dockerfile docker-for-node
 ```bash
 docker run -d --rm -p 3000:3000 --name node-app node-app:latest
 ```
+<img width="689" height="288" alt="Screenshot 2025-09-04 175017" src="https://github.com/user-attachments/assets/46acb282-7b47-4fb4-9dd7-5c7bef290e1b" />
+<img width="1422" height="422" alt="Screenshot 2025-09-04 174913" src="https://github.com/user-attachments/assets/33e9b040-b28a-4cd3-8ac6-7391eb3689a1" />
 
 Notes:
 
