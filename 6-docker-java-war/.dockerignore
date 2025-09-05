@@ -1,0 +1,42 @@
+# .dockerignore for Java WAR projects
+
+# Ignore version control
+.git
+.gitignore
+
+# Ignore typical build output but allow WAR artifacts
+target/*
+build/*
+out/*
+!target/*.war
+!build/*.war
+!*.war
+
+# Ignore IDE/editor files
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+
+# Ignore compiled / temporary files
+*.class
+*.log
+*.tmp
+*.swp
+*.bak
+
+# Node / package artifacts (if present)
+node_modules/
+npm-debug.log
+
+# OS and misc
+.DS_Store
+Thumbs.db
+
+# Secrets / keystores
+.env
+*.keystore
+*.jks
+*.p12
+*.pem
